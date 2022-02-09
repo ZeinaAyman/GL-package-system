@@ -53,8 +53,8 @@ class PackageController extends Controller
         $validated = $request->validate([
             'member_name' => 'required|regex:/^[\pL\s\-]+$/u',
             'member_id' => ['required','regex:/^20[0-9]{2}\/[0-9]{5}$/', 'unique:App\Models\Package,member_id'],
-            'phone'=>"required|max:15|min:11",
-            'email' => 'required|email',
+            'phone'=>"required|max:15|min:11|unique:packages,phone",
+            'email' => 'required|email|unique:packages,email',
             'package_items' => 'required|array|min:1',
             'nametag' => 'required',
             'nametag_name'=>"required",
