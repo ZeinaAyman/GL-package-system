@@ -27,6 +27,8 @@ body{
       .wrapper .inp {
         height: 100%;
         border: 0;
+        width: 300px;
+    max-width: 80%;
         text-align: center;
         margin-top: 20px;
         margin-bottom: 20px;
