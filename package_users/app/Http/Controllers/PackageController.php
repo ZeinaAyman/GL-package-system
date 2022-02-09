@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Postmark\PostmarkClient;
+
 class PackageController extends Controller
 {
     public function view(Request $request){
@@ -41,7 +42,7 @@ class PackageController extends Controller
     public function doCreate(Request $request){
         $messages = [
             'string'    => 'The :attribute must be text format',
-            'member_id.required'    => 'Please Enter the correct format for student ID ex: 2018/12345',
+            'member_id.regex'    => 'Please Enter the correct format for student ID ex: 2018/12345',
             'phone.required'    => 'Please enter a valid phone number',
             'package_items.required' => 'Please choose either a tshirt or a hoodie or both',
             'nametag.required' => 'Please Choose Nametag',
@@ -72,6 +73,7 @@ class PackageController extends Controller
             $package->tshirt_length = $request->tshirt_length;
             $package->tshirt_size = $request->tshirt_size;
         }
+        $package->hoodie_size = null;
         if($package->hoodie)
         {
             $package->hoodie_size = $request->hoodie_size;
@@ -86,6 +88,10 @@ class PackageController extends Controller
         
 
         $amount = 0.0;
+        
+        $tshirt_price = 150;
+        $hoodie_price = 250;
+        $nametag_price = 50;
 
         if($package->tshirt)
             $amount += 150;
@@ -102,21 +108,41 @@ class PackageController extends Controller
         
         $valid_chars = range(0,9);
         $rand_serial = implode('', array_rand($valid_chars, 6));
-
+        
         $package->serial_number = $rand_serial;
-
+        $package_details = [];
+        if($package->tshirt){
+            $package_details[]= ["description"=>$package->tshirt_length . " T-Shirt (" . $package->tshirt_size.")","amount"=>150];
+        }
+        if($package->hoodie){
+            $package_details[]= ["description"=>"Hoodie (" . $package->hoodie_size.")","amount"=>250];
+        }
+        if($package->nametag){
+            $package_details[]= ["description"=>"Nametag (" . $package->nametag_name.")","amount"=>50];
+        }
+        if($package->bracelet){
+            $package_details[]= ["description"=>"Bracelet ","amount"=>10];
+        }
+        if($package->pin){
+            $package_details[]= ["description"=>"Pin ","amount"=>15];
+        }
+        
+        
         $package->save();
         $client = new PostmarkClient(env("POSTMARK_SECRET"));
         $sendResult = $client->sendEmailWithTemplate(
                         "info@gamerslegacy.net",
                         request('email'),
-                        25435508,
+                        27002901,
                         [
                             "name" => $package->member_name,
                             "ID" => $package->member_id,
-                            "email" => $package->member_id,
-                            "phone" => $package->member_id,
-                           
+                            "email" => $package->email,
+                            "phone" => $package->phone,
+                            "package_details"=>$package_details,
+                            "total" => $package->amount,
+                            "serial_number"=> $rand_serial,
+
                         ]
                     );
 
