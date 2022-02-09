@@ -32,9 +32,7 @@
           }(jQuery));
       });
         </script>
-<div class="limiter">
-{{ csrf_field() }}
-<div class="input-field first-wrap">
+        <div class="input-field first-wrap">
                     <div class="svg-wrapper">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path
@@ -44,6 +42,9 @@
                     </div>
                     <input id="myInput" type="text"  placeholder="Search" required />
                 </div>
+<div class="limiter">
+{{ csrf_field() }}
+
 		<div class="container grid px-6 ">
 			<div class="w-full overflow-x-auto">
 				<div class="table100">
@@ -121,7 +122,7 @@
                     @endforeach	
     @else 
     <div>
-        <h2 style="text-align: center; color: white;">No Packages for now</h2>
+        <h2 style="text-align: center; color: white;">Serial number doesn't Exist</h2>
     </div>
 @endif
 				</table>
