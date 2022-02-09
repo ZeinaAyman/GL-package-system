@@ -42,7 +42,7 @@
                     </div>
                     <input id="myInput" type="text"  placeholder="Search" required />
                 </div>
-<div class="limiter">
+<div class="limiter" style="position: absolute;">
 {{ csrf_field() }}
 
 		<div class="container grid px-6 ">

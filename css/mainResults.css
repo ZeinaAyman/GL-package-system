@@ -272,6 +272,7 @@ tbody tr {
       flex-grow: 1;
   display: -ms-flexbox;
   margin-top: 20px;
+  margin-bottom: 26px;
   display: flex;
   -ms-flex-align: center;
       align-items: center;

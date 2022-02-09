@@ -37,12 +37,12 @@
                 <!-- mobile navbar -->
                 <div class="mobile-navbar">
                     <!-- navbar wrapper -->
-                    <div class="fixed left-0 w-full h-48 p-5 bg-black-600 rounded-lg shadow-xl top-16" x-show="isOpen"
+                    <div class="fixed left-0 w-full h-49 p-7 bg-black-600 rounded-lg shadow-xl top-16" style="background: white; z-index: 1;" x-show="isOpen"
                         @click.away=" isOpen = false">
                         <div class="flex flex-col space-y-6">
-                            <a href="{{route('viewall')}}" class="text-xl font-bold  text-gray-200 uppercase dark:text-white-400 hover:text-black">View All</a>
-                            <a href="{{route('search')}}" class="text-xl font-bold  text-gray-200 uppercase dark:text-white-400 hover:text-black">Search by Serial Number</a>
-                            <a href="{{route('logout')}}" class="text-xl font-bold  text-gray-200 uppercase dark:text-white-400 hover:text-black">Logout</a>
+                            <a href="{{route('viewall')}}" class="text-xl font-bold  text-black-200 uppercase dark:text-white-400 hover:text-black">View All</a>
+                            <a href="{{route('search')}}" class="text-xl font-bold  text-black-200 uppercase dark:text-white-400 hover:text-black">Search by Serial Number</a>
+                            <a href="{{route('logout')}}" class="text-xl font-bold  text-black-200 uppercase dark:text-white-400 hover:text-black">Logout</a>
                         </div>
                     </div>
                 </div>
