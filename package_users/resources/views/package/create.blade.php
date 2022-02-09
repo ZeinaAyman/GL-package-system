@@ -121,7 +121,7 @@
       <img class="item_img" style="border-radius: 50%; border: 3px solid #642d64;" src="{{ asset('img/download.jfif') }}" width="7%" height="7%" alt="">
       
       <div id="checkboxes"> 
-        <input class="cbox" type="checkbox" name="extra_items[pin]" value='pin' data-price="5" id="r5">
+        <input class="cbox" type="checkbox" name="extra_items[pin]" value='pin' data-price="15" id="r5">
         <label  class="whatever" for="r5">GL PIN</label> <br>
       </div>
       </div>
