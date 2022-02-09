@@ -58,7 +58,7 @@
         </div>
         
       </div>
-      <div>
+      <div class="check_wrap">
       <div id="length"> 
         <input  type="radio" name="tshirt_length"  value='Short Sleeve' id="short" checked >
         <label for="short">Short sleeve</label> <br>
