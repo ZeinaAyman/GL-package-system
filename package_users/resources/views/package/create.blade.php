@@ -50,7 +50,7 @@
         <div>
         <div class="items_wrapper">
         
-        <img class="item_img" style="border-radius: 50%; border: 3px solid #642d64;" src="{{ asset('img/download.jfif') }}" width="7%" height="7%" alt="">
+        <img class="item_img" style="border-radius: 50%; border: 3px solid #642d64;" src="{{ asset('img/tshirt.jpeg') }}" width="8%" height="8%" alt="">
         <div id="checkboxes"> 
           <input class="cbox" type="checkbox" name="package_items[tshirt]" value='tshirt' data-price="150" id="r1" onclick="ShowDiv()">
           <label  class="whatever" for="r1">GL TSHIRT</label> <br>
@@ -80,7 +80,7 @@
       </div>
       
       <div class="items_wrapper">
-      <img class="item_img" style="border-radius: 50%; border: 3px solid #642d64;" src="{{ asset('img/download.jfif') }}" width="7%" height="7%" alt="">
+      <img class="item_img" style="border-radius: 50%; border: 3px solid #642d64;" src="{{ asset('img/download.jfif') }}" width="8%" height="8%" alt="">
       
       <div id="checkboxes"> 
         <input class="cbox" type="checkbox" name="package_items[hoodie]" value='hoodie' data-price="250" id="r2" onclick="showhoodie()">
@@ -98,7 +98,7 @@
         <label  for="H_2XL">2XLarge</label> <br>
       </div>  
       <div class="items_wrapper">
-      <img class="item_img" style="border-radius: 50%; border: 3px solid #642d64;" src="{{ asset('img/download.jfif') }}" width="7%" height="7%" alt="">
+      <img class="item_img" style="border-radius: 50%; border: 3px solid #642d64;" src="{{ asset('img/download.jfif') }}" width="8%" height="8%" alt="">
       
       <div id="checkboxes"> 
         <input class="cbox" type="checkbox" name="nametag" value='1' data-price="50" id="r3" onclick="shownametag()">
@@ -109,7 +109,7 @@
       </div>
       <input class="inp" type="text" style="display: none; margin:auto;" name="nametag_name" id="nmtag" placeholder="Nametag Name"> <br>
       <div class="items_wrapper">
-      <img class="item_img" style="border-radius: 50%; border: 3px solid #642d64;" src="{{ asset('img/download.jfif') }}" width="7%" height="7%" alt="">
+      <img class="item_img" style="border-radius: 50%; border: 3px solid #642d64;" src="{{ asset('img/download.jfif') }}" width="8%" height="8%" alt="">
       
       <div id="checkboxes"> 
         <input class="cbox" type="checkbox" name="extra_items[bracelet]" value='bracelet' data-price="10" id="r4">
@@ -118,7 +118,7 @@
       <br><br>
       </div>
       <div class="items_wrapper">
-      <img class="item_img" style="border-radius: 50%; border: 3px solid #642d64;" src="{{ asset('img/download.jfif') }}" width="7%" height="7%" alt="">
+      <img class="item_img" style="border-radius: 50%; border: 3px solid #642d64;" src="{{ asset('img/download.jfif') }}" width="8%" height="8%" alt="">
       
       <div id="checkboxes"> 
         <input class="cbox" type="checkbox" name="extra_items[pin]" value='pin' data-price="15" id="r5">

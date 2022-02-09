@@ -43,6 +43,7 @@ body{
     .items_wrapper{
         display: flex;
     justify-content: center;
+    padding: 10px;
     margin: auto;
     align-items: center;
     }
