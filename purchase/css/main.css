@@ -1,0 +1,194 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nexa', arial, sans-serif;
+    background: #221f28;
+    font-weight: bold;
+    }
+    section{
+    height: 10vh;
+    background-color: black;
+    border-radius: 0 0 50px 50px;	
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    }
+    .wrapper{
+        text-align: center;
+        margin-top: 70px;
+    }
+
+      .wrapper .inp {
+        height: 100%;
+        border: 0;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        padding: 10px 0;
+        border-radius: 50px 50px 50px 50px;
+        font-size: 16px;
+      }
+
+    ::placeholder{
+        font-size: 15px;
+      }
+
+    .items_wrapper{
+        display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    }
+    .item_img{
+        margin-right: -40px;
+        z-index: 1;
+    }
+    .pck_items {
+        margin: 0;
+        width:15%;
+        border-radius: 50px 50px 50px 50px;
+        height: 10vh;   /* Height of the footer */
+        background:#c30bc3;
+        cursor: pointer;
+        text-align: center;
+     }
+    #footer {
+        width:100%;
+        border-radius: 50px 50px 0 0;
+        height: 15vh;   /* Height of the footer */
+        background:black;
+     }
+    h1{
+    font-size: 80px;
+    color: #fff;
+    letter-spacing: 1px;
+    }
+    h3{
+        font-size: 30px;
+        color: #fff;
+        letter-spacing: 1px;
+        text-align: center;
+        padding-top: 50px;
+    margin-top: 50px; 
+        }
+
+        h2{
+            font-size: 25px;
+        color: #fff;
+        letter-spacing: 1px;
+    
+        }
+    .wrap {
+        margin-top:50px; /* push the wrap down a bit. You might not need this */
+        align-self: center;
+        height: 100%;
+        text-align: center;
+        }
+        .whatever{
+            margin: 0;
+            width: 230px;
+            height: 70px;
+        border-radius: 50px 50px 50px 50px;
+         /* Height of the footer */
+         line-height: 60px;
+        background:#642d64;
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+        }
+        label{
+            color: white;
+            
+        }
+        .foot{
+            text-align: center;
+            display: flex;
+             flex-direction: column;
+
+        }
+        .butn-wrap {
+            min-width: 216px;
+          }
+       .butn-check{
+            height: 40px;
+  width: 10%;
+  white-space: nowrap;
+  font-size: 16px;
+  color: #fff;
+  border: 0;
+  border-radius: 50px 50px 50px 50px;
+  cursor: pointer;
+  position: relative;
+  background: #a700e6;
+  transition: all .2s ease-out, color .2s ease-out;
+  font-weight: 300;
+        }
+
+        .butn-check:hover {
+            background: #d900ff;
+          }
+        #checkboxes input[type=checkbox]{
+            display: none;
+            
+        }
+
+        #radios {
+            display: none;
+            text-align: left;
+            
+        }
+        #length {
+            display: none;
+            padding: 16px;
+            
+        }
+
+        #hoodie_radios {
+            display: none;
+            text-align: left;
+            
+        }
+        #checkboxes input[type=checkbox]:checked + .whatever{
+            background-color: #c30bc3;
+        }
+        
+    @media(max-width: 900px){
+    section{
+    height: 10vh;
+    }
+    .pck_items {
+        margin: 0;
+        width:50%;
+        border-radius: 50px 50px 50px 50px;
+        height: 10vh;   /* Height of the footer */
+        background:#c30bc3;
+        text-align: center;
+     }
+     .item_img{
+        margin-right: -40px;
+        z-index: 1;
+        width: 30%;
+        height: 30%;
+    }
+    h1{
+    margin: 15px;
+    }
+
+    .butn-check{
+        height: 40px;
+width: 50%;
+white-space: nowrap;
+font-size: 16px;
+color: #fff;
+border: 0;
+border-radius: 50px 50px 50px 50px;
+cursor: pointer;
+position: relative;
+background: #a700e6;
+transition: all .2s ease-out, color .2s ease-out;
+font-weight: 300;
+    }
+    }
+
