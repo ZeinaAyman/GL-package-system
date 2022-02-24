@@ -116,7 +116,7 @@ class PackageController extends Controller
 
         $package->amount = $amount;
         
-        $rand_serial = generateUniqueCode();
+        $rand_serial = $this->generateUniqueCode();
         
         $package->serial_number = $rand_serial;
         $package_details = [];
