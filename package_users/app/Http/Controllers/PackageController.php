@@ -43,7 +43,7 @@ class PackageController extends Controller
     {
         do {
             $valid_chars = range(0,9);
-            $rand_serial = implode('', array_rand($valid_chars, 12));
+            $rand_serial = random_int(10000000, 99999999);
         } while (Package::where('serial_number', $rand_serial)->first());
   
         return $rand_serial;
