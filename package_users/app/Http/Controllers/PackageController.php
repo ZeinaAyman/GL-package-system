@@ -39,6 +39,16 @@ class PackageController extends Controller
         return view('/package/create');
     }
 
+    public function generateUniqueCode()
+    {
+        do {
+            $valid_chars = range(0,9);
+            $rand_serial = implode('', array_rand($valid_chars, 12));
+        } while (Package::where('serial_number', $rand_serial)->first());
+  
+        return $rand_serial;
+    }
+
     public function doCreate(Request $request){
         $messages = [
             'string'    => 'The :attribute must be text format',
@@ -106,8 +116,7 @@ class PackageController extends Controller
 
         $package->amount = $amount;
         
-        $valid_chars = range(0,9);
-        $rand_serial = implode('', array_rand($valid_chars, 6));
+        $rand_serial = generateUniqueCode();
         
         $package->serial_number = $rand_serial;
         $package_details = [];
